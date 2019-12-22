@@ -8,6 +8,7 @@ import {
 
 import Tasks from './task/pages/Tasks';
 import Auth from './user/pages/Auth';
+import Questions from './task/pages/Questions';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
@@ -22,6 +23,9 @@ const App = () => {
       <Switch>
         <Route path="/" exact>
           <Tasks />
+        </Route>
+        <Route path="/questions" exact>
+          <Questions />
         </Route>
         <Redirect to="/" />
       </Switch>
